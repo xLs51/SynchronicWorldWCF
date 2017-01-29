@@ -1,0 +1,10 @@
+D:\Visual Studio 2013\Projects\SynchronicWorldClass\SynchronicWorldClass\obj\Debug\SynchronicWorldClass.csprojResolveAssemblyReference.cache
+D:\Visual Studio 2013\Projects\SynchronicWorldClass\SynchronicWorldClass\bin\Debug\SynchronicWorldClass.dll.config
+D:\Visual Studio 2013\Projects\SynchronicWorldClass\SynchronicWorldClass\bin\Debug\SynchronicWorldClass.dll
+D:\Visual Studio 2013\Projects\SynchronicWorldClass\SynchronicWorldClass\bin\Debug\SynchronicWorldClass.pdb
+D:\Visual Studio 2013\Projects\SynchronicWorldClass\SynchronicWorldClass\bin\Debug\EntityFramework.dll
+D:\Visual Studio 2013\Projects\SynchronicWorldClass\SynchronicWorldClass\bin\Debug\EntityFramework.SqlServer.dll
+D:\Visual Studio 2013\Projects\SynchronicWorldClass\SynchronicWorldClass\bin\Debug\EntityFramework.xml
+D:\Visual Studio 2013\Projects\SynchronicWorldClass\SynchronicWorldClass\bin\Debug\EntityFramework.SqlServer.xml
+D:\Visual Studio 2013\Projects\SynchronicWorldClass\SynchronicWorldClass\obj\Debug\SynchronicWorldClass.dll
+D:\Visual Studio 2013\Projects\SynchronicWorldClass\SynchronicWorldClass\obj\Debug\SynchronicWorldClass.pdb

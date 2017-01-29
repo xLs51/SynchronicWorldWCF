@@ -1,0 +1,9 @@
+D:\Visual Studio 2013\Projects\SynchronicWorldClass\SynchronicWoldConsole\obj\Debug\SynchronicWoldConsole.csprojResolveAssemblyReference.cache
+D:\Visual Studio 2013\Projects\SynchronicWorldClass\SynchronicWoldConsole\bin\Debug\SynchronicWoldConsole.exe.config
+D:\Visual Studio 2013\Projects\SynchronicWorldClass\SynchronicWoldConsole\bin\Debug\SynchronicWoldConsole.exe
+D:\Visual Studio 2013\Projects\SynchronicWorldClass\SynchronicWoldConsole\bin\Debug\SynchronicWoldConsole.pdb
+D:\Visual Studio 2013\Projects\SynchronicWorldClass\SynchronicWoldConsole\obj\Debug\SynchronicWoldConsole.exe
+D:\Visual Studio 2013\Projects\SynchronicWorldClass\SynchronicWoldConsole\obj\Debug\SynchronicWoldConsole.pdb
+D:\Visual Studio 2013\Projects\SynchronicWorldWCF\SynchronicWoldConsole\bin\Debug\SynchronicWoldConsole.exe.config
+D:\Visual Studio 2013\Projects\SynchronicWorldWCF\SynchronicWoldConsole\obj\Debug\SynchronicWoldConsole.exe
+D:\Visual Studio 2013\Projects\SynchronicWorldWCF\SynchronicWoldConsole\obj\Debug\SynchronicWoldConsole.pdb

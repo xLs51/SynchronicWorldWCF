@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/SynchronicWorldClass.DTO" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/SynchronicWorldClass.DTO" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="ArrayOfPersonDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="PersonDTO" nillable="true" type="tns:PersonDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPersonDTO" nillable="true" type="tns:ArrayOfPersonDTO" />
+  <xs:complexType name="PersonDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Email" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LastName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Password" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PersonId" type="xs:int" />
+      <xs:element minOccurs="0" name="Username" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PersonDTO" nillable="true" type="tns:PersonDTO" />
+  <xs:complexType name="ArrayOfEventDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="EventDTO" nillable="true" type="tns:EventDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfEventDTO" nillable="true" type="tns:ArrayOfEventDTO" />
+  <xs:complexType name="EventDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Address" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CreatorId" type="xs:int" />
+      <xs:element minOccurs="0" name="Date" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="EventId" type="xs:int" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Person" nillable="true" type="tns:PersonDTO" />
+      <xs:element minOccurs="0" name="StatusEvent" nillable="true" type="tns:StatusEventDTO" />
+      <xs:element minOccurs="0" name="StatusEventId" type="xs:int" />
+      <xs:element minOccurs="0" name="TypeEvent" nillable="true" type="tns:TypeEventDTO" />
+      <xs:element minOccurs="0" name="TypeEventId" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="EventDTO" nillable="true" type="tns:EventDTO" />
+  <xs:complexType name="StatusEventDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StatusEventId" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="StatusEventDTO" nillable="true" type="tns:StatusEventDTO" />
+  <xs:complexType name="TypeEventDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TypeEventId" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="TypeEventDTO" nillable="true" type="tns:TypeEventDTO" />
+  <xs:complexType name="ArrayOfTypeEventDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="TypeEventDTO" nillable="true" type="tns:TypeEventDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfTypeEventDTO" nillable="true" type="tns:ArrayOfTypeEventDTO" />
+  <xs:complexType name="ArrayOfStatusEventDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="StatusEventDTO" nillable="true" type="tns:StatusEventDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfStatusEventDTO" nillable="true" type="tns:ArrayOfStatusEventDTO" />
+  <xs:complexType name="PersonEventDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Event" nillable="true" type="tns:EventDTO" />
+      <xs:element minOccurs="0" name="EventId" type="xs:int" />
+      <xs:element minOccurs="0" name="Person" nillable="true" type="tns:PersonDTO" />
+      <xs:element minOccurs="0" name="PersonEventId" type="xs:int" />
+      <xs:element minOccurs="0" name="PersonId" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PersonEventDTO" nillable="true" type="tns:PersonEventDTO" />
+  <xs:complexType name="ArrayOfPersonEventDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="PersonEventDTO" nillable="true" type="tns:PersonEventDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPersonEventDTO" nillable="true" type="tns:ArrayOfPersonEventDTO" />
+  <xs:complexType name="ArrayOfContributionDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ContributionDTO" nillable="true" type="tns:ContributionDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfContributionDTO" nillable="true" type="tns:ArrayOfContributionDTO" />
+  <xs:complexType name="ContributionDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ContributionId" type="xs:int" />
+      <xs:element minOccurs="0" name="Event" nillable="true" type="tns:EventDTO" />
+      <xs:element minOccurs="0" name="EventId" type="xs:int" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Person" nillable="true" type="tns:PersonDTO" />
+      <xs:element minOccurs="0" name="PersonId" type="xs:int" />
+      <xs:element minOccurs="0" name="Quantity" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TypeContribution" nillable="true" type="tns:TypeContributionDTO" />
+      <xs:element minOccurs="0" name="TypeContributionId" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ContributionDTO" nillable="true" type="tns:ContributionDTO" />
+  <xs:complexType name="TypeContributionDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TypeContributionId" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="TypeContributionDTO" nillable="true" type="tns:TypeContributionDTO" />
+  <xs:complexType name="ArrayOfTypeContributionDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="TypeContributionDTO" nillable="true" type="tns:TypeContributionDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfTypeContributionDTO" nillable="true" type="tns:ArrayOfTypeContributionDTO" />
+</xs:schema>

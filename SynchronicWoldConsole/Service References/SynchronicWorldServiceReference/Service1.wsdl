@@ -1,0 +1,704 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="Service1" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:18070/Service1.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:18070/Service1.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:18070/Service1.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/SynchronicWorldClass.DTO" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IService1_GetAllPerson_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllPerson" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetAllPerson_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllPersonResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetPerson_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPerson" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetPerson_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPersonResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_InsertPerson_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertPerson" />
+  </wsdl:message>
+  <wsdl:message name="IService1_InsertPerson_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertPersonResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_EditPerson_InputMessage">
+    <wsdl:part name="parameters" element="tns:EditPerson" />
+  </wsdl:message>
+  <wsdl:message name="IService1_EditPerson_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EditPersonResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_RemovePerson_InputMessage">
+    <wsdl:part name="parameters" element="tns:RemovePerson" />
+  </wsdl:message>
+  <wsdl:message name="IService1_RemovePerson_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RemovePersonResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetAllEvent_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllEvent" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetAllEvent_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllEventResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetEvent_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetEvent" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetEvent_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetEventResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_InsertEvent_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertEvent" />
+  </wsdl:message>
+  <wsdl:message name="IService1_InsertEvent_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertEventResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_EditEvent_InputMessage">
+    <wsdl:part name="parameters" element="tns:EditEvent" />
+  </wsdl:message>
+  <wsdl:message name="IService1_EditEvent_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EditEventResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_UpdateEventPending_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateEventPending" />
+  </wsdl:message>
+  <wsdl:message name="IService1_UpdateEventPending_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateEventPendingResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_RemoveEvent_InputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveEvent" />
+  </wsdl:message>
+  <wsdl:message name="IService1_RemoveEvent_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveEventResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_RemoveEventClosed_InputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveEventClosed" />
+  </wsdl:message>
+  <wsdl:message name="IService1_RemoveEventClosed_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveEventClosedResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetEventByName_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetEventByName" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetEventByName_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetEventByNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetEventByType_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetEventByType" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetEventByType_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetEventByTypeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetEventByStatus_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetEventByStatus" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetEventByStatus_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetEventByStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetEventByDate_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetEventByDate" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetEventByDate_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetEventByDateResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetEventBetweenDate_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetEventBetweenDate" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetEventBetweenDate_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetEventBetweenDateResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetAllTypeEvent_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllTypeEvent" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetAllTypeEvent_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllTypeEventResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetTypeEventByName_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetTypeEventByName" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetTypeEventByName_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetTypeEventByNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetTypeEvent_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetTypeEvent" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetTypeEvent_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetTypeEventResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_InsertTypeEvent_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertTypeEvent" />
+  </wsdl:message>
+  <wsdl:message name="IService1_InsertTypeEvent_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertTypeEventResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetAllStatusEvent_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllStatusEvent" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetAllStatusEvent_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllStatusEventResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetStatusEventByName_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetStatusEventByName" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetStatusEventByName_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetStatusEventByNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetStatusEvent_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetStatusEvent" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetStatusEvent_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetStatusEventResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_InsertStatusEvent_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertStatusEvent" />
+  </wsdl:message>
+  <wsdl:message name="IService1_InsertStatusEvent_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertStatusEventResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_InsertPersonEvent_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertPersonEvent" />
+  </wsdl:message>
+  <wsdl:message name="IService1_InsertPersonEvent_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertPersonEventResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetPersonEventByEvent_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPersonEventByEvent" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetPersonEventByEvent_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPersonEventByEventResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetAllContribution_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllContribution" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetAllContribution_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllContributionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetContributionByEvent_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetContributionByEvent" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetContributionByEvent_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetContributionByEventResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetContributionByPerson_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetContributionByPerson" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetContributionByPerson_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetContributionByPersonResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_InsertContribution_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertContribution" />
+  </wsdl:message>
+  <wsdl:message name="IService1_InsertContribution_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertContributionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_RemoveContributionByPerson_InputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveContributionByPerson" />
+  </wsdl:message>
+  <wsdl:message name="IService1_RemoveContributionByPerson_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveContributionByPersonResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetAllTypeContribution_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllTypeContribution" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetAllTypeContribution_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllTypeContributionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetTypeContribution_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetTypeContribution" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetTypeContribution_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetTypeContributionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_InsertTypeContribution_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertTypeContribution" />
+  </wsdl:message>
+  <wsdl:message name="IService1_InsertTypeContribution_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertTypeContributionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetTypeContributionByName_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetTypeContributionByName" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetTypeContributionByName_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetTypeContributionByNameResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IService1">
+    <wsdl:operation name="GetAllPerson">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetAllPerson" message="tns:IService1_GetAllPerson_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetAllPersonResponse" message="tns:IService1_GetAllPerson_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPerson">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetPerson" message="tns:IService1_GetPerson_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetPersonResponse" message="tns:IService1_GetPerson_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertPerson">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/InsertPerson" message="tns:IService1_InsertPerson_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/InsertPersonResponse" message="tns:IService1_InsertPerson_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EditPerson">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/EditPerson" message="tns:IService1_EditPerson_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/EditPersonResponse" message="tns:IService1_EditPerson_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RemovePerson">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/RemovePerson" message="tns:IService1_RemovePerson_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/RemovePersonResponse" message="tns:IService1_RemovePerson_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllEvent">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetAllEvent" message="tns:IService1_GetAllEvent_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetAllEventResponse" message="tns:IService1_GetAllEvent_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEvent">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetEvent" message="tns:IService1_GetEvent_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetEventResponse" message="tns:IService1_GetEvent_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertEvent">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/InsertEvent" message="tns:IService1_InsertEvent_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/InsertEventResponse" message="tns:IService1_InsertEvent_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EditEvent">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/EditEvent" message="tns:IService1_EditEvent_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/EditEventResponse" message="tns:IService1_EditEvent_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateEventPending">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/UpdateEventPending" message="tns:IService1_UpdateEventPending_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/UpdateEventPendingResponse" message="tns:IService1_UpdateEventPending_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RemoveEvent">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/RemoveEvent" message="tns:IService1_RemoveEvent_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/RemoveEventResponse" message="tns:IService1_RemoveEvent_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RemoveEventClosed">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/RemoveEventClosed" message="tns:IService1_RemoveEventClosed_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/RemoveEventClosedResponse" message="tns:IService1_RemoveEventClosed_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEventByName">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetEventByName" message="tns:IService1_GetEventByName_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetEventByNameResponse" message="tns:IService1_GetEventByName_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEventByType">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetEventByType" message="tns:IService1_GetEventByType_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetEventByTypeResponse" message="tns:IService1_GetEventByType_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEventByStatus">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetEventByStatus" message="tns:IService1_GetEventByStatus_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetEventByStatusResponse" message="tns:IService1_GetEventByStatus_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEventByDate">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetEventByDate" message="tns:IService1_GetEventByDate_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetEventByDateResponse" message="tns:IService1_GetEventByDate_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEventBetweenDate">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetEventBetweenDate" message="tns:IService1_GetEventBetweenDate_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetEventBetweenDateResponse" message="tns:IService1_GetEventBetweenDate_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllTypeEvent">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetAllTypeEvent" message="tns:IService1_GetAllTypeEvent_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetAllTypeEventResponse" message="tns:IService1_GetAllTypeEvent_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTypeEventByName">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetTypeEventByName" message="tns:IService1_GetTypeEventByName_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetTypeEventByNameResponse" message="tns:IService1_GetTypeEventByName_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTypeEvent">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetTypeEvent" message="tns:IService1_GetTypeEvent_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetTypeEventResponse" message="tns:IService1_GetTypeEvent_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertTypeEvent">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/InsertTypeEvent" message="tns:IService1_InsertTypeEvent_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/InsertTypeEventResponse" message="tns:IService1_InsertTypeEvent_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllStatusEvent">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetAllStatusEvent" message="tns:IService1_GetAllStatusEvent_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetAllStatusEventResponse" message="tns:IService1_GetAllStatusEvent_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetStatusEventByName">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetStatusEventByName" message="tns:IService1_GetStatusEventByName_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetStatusEventByNameResponse" message="tns:IService1_GetStatusEventByName_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetStatusEvent">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetStatusEvent" message="tns:IService1_GetStatusEvent_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetStatusEventResponse" message="tns:IService1_GetStatusEvent_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertStatusEvent">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/InsertStatusEvent" message="tns:IService1_InsertStatusEvent_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/InsertStatusEventResponse" message="tns:IService1_InsertStatusEvent_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertPersonEvent">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/InsertPersonEvent" message="tns:IService1_InsertPersonEvent_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/InsertPersonEventResponse" message="tns:IService1_InsertPersonEvent_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPersonEventByEvent">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetPersonEventByEvent" message="tns:IService1_GetPersonEventByEvent_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetPersonEventByEventResponse" message="tns:IService1_GetPersonEventByEvent_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllContribution">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetAllContribution" message="tns:IService1_GetAllContribution_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetAllContributionResponse" message="tns:IService1_GetAllContribution_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetContributionByEvent">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetContributionByEvent" message="tns:IService1_GetContributionByEvent_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetContributionByEventResponse" message="tns:IService1_GetContributionByEvent_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetContributionByPerson">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetContributionByPerson" message="tns:IService1_GetContributionByPerson_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetContributionByPersonResponse" message="tns:IService1_GetContributionByPerson_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertContribution">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/InsertContribution" message="tns:IService1_InsertContribution_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/InsertContributionResponse" message="tns:IService1_InsertContribution_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RemoveContributionByPerson">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/RemoveContributionByPerson" message="tns:IService1_RemoveContributionByPerson_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/RemoveContributionByPersonResponse" message="tns:IService1_RemoveContributionByPerson_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllTypeContribution">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetAllTypeContribution" message="tns:IService1_GetAllTypeContribution_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetAllTypeContributionResponse" message="tns:IService1_GetAllTypeContribution_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTypeContribution">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetTypeContribution" message="tns:IService1_GetTypeContribution_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetTypeContributionResponse" message="tns:IService1_GetTypeContribution_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertTypeContribution">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/InsertTypeContribution" message="tns:IService1_InsertTypeContribution_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/InsertTypeContributionResponse" message="tns:IService1_InsertTypeContribution_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTypeContributionByName">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetTypeContributionByName" message="tns:IService1_GetTypeContributionByName_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetTypeContributionByNameResponse" message="tns:IService1_GetTypeContributionByName_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IService1" type="tns:IService1">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetAllPerson">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetAllPerson" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPerson">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetPerson" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertPerson">
+      <soap:operation soapAction="http://tempuri.org/IService1/InsertPerson" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EditPerson">
+      <soap:operation soapAction="http://tempuri.org/IService1/EditPerson" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RemovePerson">
+      <soap:operation soapAction="http://tempuri.org/IService1/RemovePerson" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllEvent">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetAllEvent" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEvent">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetEvent" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertEvent">
+      <soap:operation soapAction="http://tempuri.org/IService1/InsertEvent" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EditEvent">
+      <soap:operation soapAction="http://tempuri.org/IService1/EditEvent" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateEventPending">
+      <soap:operation soapAction="http://tempuri.org/IService1/UpdateEventPending" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RemoveEvent">
+      <soap:operation soapAction="http://tempuri.org/IService1/RemoveEvent" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RemoveEventClosed">
+      <soap:operation soapAction="http://tempuri.org/IService1/RemoveEventClosed" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEventByName">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetEventByName" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEventByType">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetEventByType" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEventByStatus">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetEventByStatus" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEventByDate">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetEventByDate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEventBetweenDate">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetEventBetweenDate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllTypeEvent">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetAllTypeEvent" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTypeEventByName">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetTypeEventByName" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTypeEvent">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetTypeEvent" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertTypeEvent">
+      <soap:operation soapAction="http://tempuri.org/IService1/InsertTypeEvent" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllStatusEvent">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetAllStatusEvent" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetStatusEventByName">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetStatusEventByName" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetStatusEvent">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetStatusEvent" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertStatusEvent">
+      <soap:operation soapAction="http://tempuri.org/IService1/InsertStatusEvent" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertPersonEvent">
+      <soap:operation soapAction="http://tempuri.org/IService1/InsertPersonEvent" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPersonEventByEvent">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetPersonEventByEvent" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllContribution">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetAllContribution" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetContributionByEvent">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetContributionByEvent" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetContributionByPerson">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetContributionByPerson" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertContribution">
+      <soap:operation soapAction="http://tempuri.org/IService1/InsertContribution" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RemoveContributionByPerson">
+      <soap:operation soapAction="http://tempuri.org/IService1/RemoveContributionByPerson" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllTypeContribution">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetAllTypeContribution" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTypeContribution">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetTypeContribution" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertTypeContribution">
+      <soap:operation soapAction="http://tempuri.org/IService1/InsertTypeContribution" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTypeContributionByName">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetTypeContributionByName" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Service1">
+    <wsdl:port name="BasicHttpBinding_IService1" binding="tns:BasicHttpBinding_IService1">
+      <soap:address location="http://localhost:18070/Service1.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
